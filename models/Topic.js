@@ -1,15 +1,16 @@
-var mongoose = require( 'mongoose' );
-var Schema   = mongoose.Schema;
+var mongoose = require("mongoose");
+var Schema = mongoose.Schema;
+var ObjectId = Schema.ObjectId;
 
 module.exports = function(app) {
 	var Topic = new Schema({
 		created: Date,
 		modified: Date,
-		forum: Number,
+		_forum: ObjectId,
 		name: String,
 		slug: String,
-		first: Number,
-		latest: Number,
+		_author: ObjectId,
+		_latest: ObjectId,
 		messages: Number,
 		views: Number,
 		sticky: Boolean,

@@ -3,14 +3,10 @@ var Schema   = mongoose.Schema;
 var ObjectId = Schema.ObjectId;
 
 module.exports = function(app) {
-	var Message = new Schema({
-		created: Date,
-		edited: Date,
-		_editor: ObjectId,
-		_topic: ObjectId,
+	mongoose.model("Group", new Schema({
 		name: String,
 		slug: String,
-		body: String,
-		_author: ObjectId
-	});
+		description: String,
+		_leader: ObjectId
+	}));
 };

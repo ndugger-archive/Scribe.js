@@ -1,8 +1,14 @@
 var mongoose = require("mongoose");
 var express = require("express");
-var engine = require("ejs-locals"); // unmaintained: perhaps try https://github.com/baryshev/ect
+var engine = require("ejs-locals");
 var app = express();
 var fs = require("fs");
+
+// ----------
+// EJS Alternatives (since ejs-locals in unmaintained):
+// https://github.com/linkedin/dustjs
+// https://github.com/baryshev/ect
+// ----------
 
 // Models
 fs.readdirSync(__dirname + "/models").forEach(function(file) {

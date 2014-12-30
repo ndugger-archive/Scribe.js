@@ -1,7 +1,18 @@
 <% layout("template") %>
 
-<h2><%= forum.name %></h2>
-
-<pre><%- category %></pre>
-
-<pre><%- forum %></pre>
+<section class="forum">
+	<h2 class="name">
+		<a href="/<%= category.slug %>/<%= forum.slug %>">
+			<%= category.name %>
+		</a>
+	</h2>
+	<% category.forums.forEach(function(topic) { %>
+	<article class="topic">
+		<h3 class="name">
+			<a href="/<%= category.slug %>/<%= forum.slug %>/<%= topic.slug %>">
+				<%= topic.name %>
+			</a>
+		</h3>
+	</article>
+	<% }); %>
+</section>
