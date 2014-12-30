@@ -5,7 +5,7 @@ var app = express();
 var fs = require("fs");
 
 // ----------
-// EJS Alternatives (since ejs-locals in unmaintained):
+// EJS Alternatives (since ejs-locals is unmaintained):
 // https://github.com/linkedin/dustjs
 // https://github.com/baryshev/ect
 // ----------
