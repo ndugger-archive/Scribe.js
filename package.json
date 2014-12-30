@@ -1,0 +1,32 @@
+{
+  "name": "scribe",
+  "version": "1.0.0",
+  "description": "JS Forum Software",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ndugger/scribe"
+  },
+  "keywords": [
+    "forums",
+    "messages",
+    "chat"
+  ],
+  "author": "Nick Dugger",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ndugger/scribe/issues"
+  },
+  "homepage": "http://www.nickdugger.com/",
+  "dependencies": {
+    "bluebird": "^2.5.2",
+    "body-parser": "^1.10.0",
+    "ejs": "^1.0.0",
+    "ejs-locals": "^1.0.2",
+    "express": "^4.10.6",
+    "mongoose": "^3.8.21"
+  }
+}

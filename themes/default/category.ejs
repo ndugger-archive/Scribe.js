@@ -1,0 +1,21 @@
+<% layout("template") %>
+
+<section class="category">
+	<h2 class="name">
+		<a href="/<%= category.slug %>">
+			<%= category.name %>
+		</a>
+	</h2>
+	<% category.forums.forEach(function(forum) { %>
+		<article class="forum">
+			<h3 class="name">
+				<a href="/<%= category.slug %>/<%= forum.slug %>">
+					<%= forum.name %>
+				</a>
+			</h3>
+			<p class="description">
+				<%= forum.description %>
+			</p>
+		</article>
+	<% }); %>
+</section>

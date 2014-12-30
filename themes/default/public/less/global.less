@@ -1,0 +1,89 @@
+// out: ../css/global.css
+
+@red:#dd2153;
+@blue:#079df4;
+@darkblue:#0173d4;
+@lightgrey:#666;
+@grey:#444;
+@darkgrey:#222;
+@maxwidth:800px;
+
+body {
+	background:@grey;
+	margin:0;
+	font-family: "Lato", sans-serif;
+	a {
+		color:@blue;
+		text-decoration:none;
+		&:hover {
+			text-decoration:underline;
+		}
+	}
+	header {
+		color:#FFF;
+		background:@blue;
+		margin:0 0 20px;
+		aside {
+			height:40px;
+			background:@darkblue;
+		}
+		nav {
+			width:100%;
+			max-width:@maxwidth;
+			height:80px;
+			line-height:80px;
+			text-transform:uppercase;
+			margin:auto;
+			.logo {
+				font-size:28px;
+				font-family: "Fjalla One", sans-serif;
+				display:inline-block;
+				margin:0;
+				padding:0;
+				vertical-align:middle;
+			}
+		}
+	}
+	main {
+		max-width:@maxwidth;
+		margin:auto;
+		.category {
+			& > .name {
+				margin:0;
+				line-height:32px;
+				padding:0 12px;
+				font-size:18px;
+				font-weight:normal;
+				background:@darkgrey;
+				a {
+					color:#FFF;
+				}
+			}
+			.forum {
+				background:@lightgrey;
+				padding:8px 12px;;
+				& > .name {
+					margin:0;
+					padding:0;
+				}
+				.description {
+					margin:0;
+					padding:0;
+				}
+			}
+		}
+		.forum {
+			.topic {
+				
+			}
+		}
+		.topic {
+			.message {
+				
+			}
+		}
+	}
+	footer {
+		
+	}
+}
