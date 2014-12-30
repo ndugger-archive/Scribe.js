@@ -11,8 +11,16 @@ var fs = require("fs");
 // ----------
 
 // Models
-fs.readdirSync(__dirname + "/models").forEach(function(file) {
-	require(__dirname + "/models/" + file)(app);
+var models = [
+	"Author",
+	"Category",
+	"Forum",
+	"Group",
+	"Message",
+	"Topic"
+];
+models.forEach(function(model) {
+	require(__dirname + "/models/" + model + ".js")(app);
 });
 
 // Database
@@ -28,8 +36,13 @@ app.use("/theme", express.static(__dirname + "/themes/" + theme + "/public"));
 app.set("view engine", "ejs");
 
 // Controllers
-fs.readdirSync(__dirname + "/controllers").forEach(function(file) {
-	require(__dirname + "/controllers/" + file)(app);
+var controllers = [
+	"Category",
+	"Forum",
+	"Index"
+];
+controllers.forEach(function(controller) {
+	require(__dirname + "/controllers/" + controller + ".controller.js")(app);
 });
 
 // Server

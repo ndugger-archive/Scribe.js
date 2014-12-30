@@ -3,7 +3,7 @@ var Schema   = mongoose.Schema;
 var ObjectId = Schema.ObjectId;
 
 module.exports = function(app) {
-	var Message = new Schema({
+	mongoose.model("Message", new Schema({
 		created: Date,
 		edited: Date,
 		_editor: ObjectId,
@@ -12,5 +12,5 @@ module.exports = function(app) {
 		slug: String,
 		body: String,
 		_author: ObjectId
-	});
+	}));
 };

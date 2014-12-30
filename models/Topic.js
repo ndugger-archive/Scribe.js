@@ -3,7 +3,7 @@ var Schema = mongoose.Schema;
 var ObjectId = Schema.ObjectId;
 
 module.exports = function(app) {
-	var Topic = new Schema({
+	mongoose.model("Topic", new Schema({
 		created: Date,
 		modified: Date,
 		_forum: ObjectId,
