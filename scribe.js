@@ -49,5 +49,5 @@ controllers.forEach(function(controller) {
 var server = app.listen(80, function () {
 	var host = server.address().address;
 	var port = server.address().port;
-	console.log("Scribe is now listening at http://%s:%s", host, port);
+	console.log("Scribe has started (http://%s:%s)", host, port);
 });
